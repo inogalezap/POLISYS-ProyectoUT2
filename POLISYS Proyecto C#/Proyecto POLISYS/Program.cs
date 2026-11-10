@@ -26,12 +26,7 @@ do
     Console.WriteLine("[3] Salir del programa");
     Console.Write("Seleccione una opción: ");
     usuario = Convert.ToInt32(Console.ReadLine());
-    } else
-    {
-        Console.WriteLine("Elija una opcion válida");
-        Console.WriteLine("Pulse cualquier tecla para volver...");
-        Console.ReadKey();
-    }
+    }  
     switch (usuario)
     {
         case 1:
@@ -274,6 +269,11 @@ do
         Console.WriteLine("Preciona una tecla para volver...");
         Console.ReadKey();
         }
+        break;
+        default:
+        Console.WriteLine("Elija una opcion válida");
+        Console.WriteLine("Pulse cualquier tecla para volver...");
+        Console.ReadKey();
         break;
     }
 } while (usuario != 3);
