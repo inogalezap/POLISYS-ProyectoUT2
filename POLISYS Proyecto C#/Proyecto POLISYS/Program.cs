@@ -5,11 +5,11 @@ int usuario = 0;
 string? AgenteResponsable = "";
 string? ciudadano = "";
 string? ciudadanoMax = "";
-int Intervecion = 0;
-int recurso = 0;
-int urgencia = 0;
-int total = 0;
-int numeroIntervencion = 0;
+double Intervecion = 0;
+double recurso = 0;
+double urgencia = 0;
+double total = 0;
+double numeroIntervencion = 0;
 double descuento = 0;
 double presupuestoAsignado = 0;
 double numeroEstdisticas = 0;
@@ -18,7 +18,7 @@ double importeMax = 0;
 do
 {
     //Menu principal
-     if (usuario < 1 ||usuario > 3){
+     
     Console.Clear();
     Console.WriteLine("-------------POLISYS-----------");
     Console.WriteLine("[1] Registrar nueva intervencion");
@@ -26,7 +26,7 @@ do
     Console.WriteLine("[3] Salir del programa");
     Console.Write("Seleccione una opción: ");
     usuario = Convert.ToInt32(Console.ReadLine());
-    }  
+    
     switch (usuario)
     {
         case 1:
@@ -45,7 +45,7 @@ do
        do
        {
         Console.Write("Nombre de agente asociado: ");
-        AgenteResponsable = Console.ReadLine();
+        AgenteResponsable = Console.ReadLine()?.Trim();
         if (AgenteResponsable == "")
         {
             Console.WriteLine("El nombre no puede estar vacio. Intentalo de nuevo");
@@ -54,7 +54,7 @@ do
        do
        {
         Console.Write("Nombre de ciudadano asociado: ");
-        ciudadano = Console.ReadLine();
+        ciudadano = Console.ReadLine()?.Trim();
         if (ciudadano == "")
         {
             Console.WriteLine("--------------------------------------------------");
